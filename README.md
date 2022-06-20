@@ -2,10 +2,18 @@
 
 REST-Rant is an app where users can review restaurants.
 
+Routes
 
-
-End of Assignment notes:
-
-couple questions, What is Postman (Never mind I saw that I accidently skipped over this lesson and am now backtracking to it.) and also what did I do that I no longer and connect with nodemon?
-
-error says cannot find module 'express'
+| Method | Path | Purpose |
+|---|---|---|
+| GET | / | Home Page |
+| GET | /places | Places index page | 
+| POST | /places | Create new place | 
+| GET | /places/new | Form page for creating a new place |
+| GET | /plcase/:id | Details about a particular place |
+| PUT | /places/:id | Update a particular place |
+| GET | /places/:id/edit | Form page for editing an existing place |
+| DELETE | /places/:id | Delete a particular place |
+| POST | /places/:id/rant/:rantId | Create a rant (comment) about a particular place |
+| DELETE | /places/:id/rant/:randId | Delete a rant (comment) about a particular place |
+| GET | * | 404 page (matches any route not defined above) |
