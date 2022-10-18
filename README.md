@@ -30,35 +30,38 @@ REST-Rant is an app where users can review restaurants.
 
 
 Other notes
-error message with doing anything with npm 
-npm WARN config global `--global`, `--local` are deprecated. Use `--location=global` instead.
-npm ERR! code ERESOLVE
-npm ERR! ERESOLVE could not resolve
-npm ERR!
-npm ERR! While resolving: express-react-views@0.11.0
-npm ERR! Found: react@18.2.0
-npm ERR! node_modules/react
-npm ERR!   peer react@"^18.2.0" from react-dom@18.2.0
-npm ERR!   node_modules/react-dom
-npm ERR!     react-dom@"^18.2.0" from the root project
-npm ERR!   react@"^18.2.0" from the root project
-npm ERR!
-npm ERR! Could not resolve dependency:
-npm ERR! peer react@"^0.14.0 || ^15.0.0 || ^16.0.0" from express-react-views@0.11.0       
-npm ERR! node_modules/express-react-views
-npm ERR!   express-react-views@"^0.11.0" from the root project
-npm ERR!
-npm ERR! Conflicting peer dependency: react@16.14.0
-npm ERR! node_modules/react
-npm ERR!   peer react@"^0.14.0 || ^15.0.0 || ^16.0.0" from express-react-views@0.11.0     
-npm ERR!   node_modules/express-react-views
-npm ERR!     express-react-views@"^0.11.0" from the root project
-npm ERR!
-npm ERR! Fix the upstream dependency conflict, or retry
-npm ERR! this command with --force, or --legacy-peer-deps
-npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
-npm ERR!
-npm ERR! See C:\Users\laman\AppData\Local\npm-cache\eresolve-report.txt for a full report.
+ new issues now with trying to access nodemon
 
-npm ERR! A complete log of this run can be found in:
-npm ERR!     C:\Users\laman\AppData\Local\npm-cache\_logs\2022-10-18T19_33_18_792Z-debug-0.log
+ $ nodemon
+Debugger attached.
+[nodemon] 2.0.16
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node index.js`
+Debugger attached.
+Waiting for the debugger to disconnect...
+node:internal/modules/cjs/loader:988
+  throw err;
+  ^
+
+Error: Cannot find module 'express-react-views'
+Require stack:
+- C:\Users\laman\desktop\softdev\be and api\rest-rant-part2-3\index.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:985:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:833:27)
+    at Module.require (node:internal/modules/cjs/loader:1057:19)
+    at require (node:internal/modules/cjs/helpers:103:18)
+    at Object.<anonymous> (C:\Users\laman\desktop\softdev\be and api\rest-rant-part2-3\index.js:8:19)
+    at Module._compile (node:internal/modules/cjs/loader:1155:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1209:10)
+    at Module.load (node:internal/modules/cjs/loader:1033:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:868:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\laman\\desktop\\softdev\\be and api\\rest-rant-part2-3\\index.js'
+  ]
+}
+
+[nodemon] app crashed - waiting for file changes before starting...
